@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Mentorias PMT 26</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f5f2;--card:#fff;--tx:#1f2328;--mu:#6b7280;--bd:#e5e3dd;--ac:#2f6fed;--ok:#1f9d6b;--wa:#e0a100;--er:#d64545;--okb:#dff5ea;--wab:#fff3cf;--erb:#fde2e2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17181a;--card:#222427;--tx:#ececec;--mu:#9aa0a6;--bd:#34373b;--ac:#6b9bff;--ok:#43c08f;--wa:#e8b923;--er:#ef6b6b;--okb:#1d3a2f;--wab:#3d3515;--erb:#442425}}
+:root[data-theme="dark"]{--bg:#17181a;--card:#222427;--tx:#ececec;--mu:#9aa0a6;--bd:#34373b;--ac:#6b9bff;--ok:#43c08f;--wa:#e8b923;--er:#ef6b6b;--okb:#1d3a2f;--wab:#3d3515;--erb:#442425}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:0}h2{font-size:15px;margin:0 0 12px}.mu{color:var(--mu);font-size:13px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:14px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:14px}
+.g2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.kpi b{display:block;font-size:28px;line-height:1.1}.kpi{margin:0}
+button,input,select{font:inherit;color:var(--tx)}
+button{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:7px 12px;cursor:pointer}
+button.p{background:var(--ac);border-color:var(--ac);color:#fff}button.d{color:var(--er)}button:hover{filter:brightness(.96)}
+textarea{font:inherit;color:var(--tx);width:100%;min-height:90px;resize:vertical;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px}
+.rd{display:flex;gap:8px;align-items:center;padding:10px;border:1px solid var(--bd);border-radius:8px;margin-bottom:8px;cursor:pointer}.rd input{accent-color:var(--er);margin:0}
+input,select{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px}
+input:focus{outline:2px solid var(--ac)}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}.tabs button.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>input.f{flex:1;min-width:160px}
+.bar{height:10px;border-radius:6px;background:var(--bd);overflow:hidden}.bar i{display:block;height:100%;background:var(--ok)}
+.br{display:grid;grid-template-columns:44px 1fr 56px;gap:8px;align-items:center;margin:6px 0;font-size:13px}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600}
+.ok{background:var(--okb);color:var(--ok)}.wa{background:var(--wab);color:var(--wa)}.er{background:var(--erb);color:var(--er)}.gr{background:var(--bd);color:var(--mu)}
+.hm{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;min-width:200px}
+.hm span{height:24px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;background:var(--bd);color:var(--mu)}
+.hm .ok{background:var(--ok);color:#fff}.hm .er{background:var(--erb);color:var(--er);outline:1px solid var(--er)}.hm .wa{outline:2px dashed var(--wa);outline-offset:-2px;background:var(--wab);color:var(--wa)}
+.hm.big{min-width:520px}.hm.big span{height:36px;font-size:11px}.hm.big.hl span{font-size:10px;font-weight:400}
+.hl{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;font-size:10px;color:var(--mu);text-align:center;min-width:200px}
+.sc{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:820px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--bd);font-size:14px}th{font-size:12px;color:var(--mu);font-weight:600}
+tr.c{cursor:pointer}tr.c:hover td{background:var(--bg)}
+.it{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.it:last-child{border:0}.err{color:var(--er);font-size:13px;margin-top:6px}
+.ov{position:fixed;inset:0;z-index:9;background:rgba(10,12,16,.6);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px))}.ov .card{width:100%;max-width:420px;margin:0;box-shadow:0 20px 60px rgba(0,0,0,.35)}.ov .row>input.f{min-width:0}
+.chip{border-radius:99px;padding:4px 12px;font-size:13px}.chip.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+</style></head><body><div class="w" id="app"><p class="mu">Carregando…</p></div>
+<script type="module">
+import{initializeApp}from'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import{getFirestore,doc,collection,onSnapshot,updateDoc,setDoc,writeBatch}from'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
+const firebaseConfig={apiKey:"AIzaSyD5cupTb_m_crIAC0ckSBij3RqwvdWBexk",authDomain:"pmt---site.firebaseapp.com",projectId:"pmt---site",storageBucket:"pmt---site.firebasestorage.app",messagingSenderId:"387144775229",appId:"1:387144775229:web:0cbed3b757e835d21d9c54"};
+const fdb=getFirestore(initializeApp(firebaseConfig));
+const SEED={"arthur-braz-silva-fernandes":{"mentorias":[{"date":"2026-03-27","id":"m0","note":""},{"date":"2026-05-04","id":"m1","note":""},{"date":"2026-05-18","id":"m2","note":""}],"name":"Arthur Braz Silva Fernandes","obs":"Dificuldade para encontrar horário com o mentor.","status":"desistente","turma":"M"},"arthur-cardozo-de-campos-bueno":{"mentorias":[{"date":"2026-03-20","id":"m0","note":""},{"date":"2026-04-29","id":"m1","note":""},{"date":"2026-05-20","id":"m2","note":""},{"date":"2026-08-15","id":"m3","note":""},{"date":"2026-10-05","id":"m4","note":""}],"name":"Arthur Cardozo de Campos Bueno","obs":"","status":"ativo","turma":"M"},"arthur-eduardo-miranda-ribeiro":{"mentorias":[{"date":"2026-03-20","id":"m0","note":""},{"date":"2026-04-17","id":"m1","note":""},{"date":"2026-06-05","id":"m2","note":""},{"date":"2026-06-16","id":"m3","note":""},{"date":"2026-07-10","id":"m4","note":""},{"date":"2026-08-28","id":"m5","note":""},{"date":"2026-10-07","id":"m6","note":""}],"name":"Arthur Eduardo Miranda Ribeiro","obs":"","status":"ativo","turma":"M"},"arthur-ribeiro-cunha":{"mentorias":[{"date":"2026-03-20","id":"m0","note":""},{"date":"2026-04-27","id":"m1","note":""},{"date":"2026-06-01","id":"m2","note":""},{"date":"2026-07-06","id":"m3","note":""},{"date":"2026-07-27","id":"m4","note":""},{"date":"2026-08-21","id":"m5","note":""},{"date":"2026-09-28","id":"m6","note":""}],"name":"Arthur Ribeiro Cunha","obs":"","status":"ativo","turma":"M"},"caique-dourado-da-silva":{"mentorias":[{"date":"2026-04-10","id":"m0","note":""},{"date":"2026-04-30","id":"m1","note":""},{"date":"2026-05-20","id":"m2","note":""},{"date":"2026-08-28","id":"m3","note":""},{"date":"2026-10-08","id":"m4","note":""}],"name":"Caique Dourado Da Silva","obs":"","status":"ativo","turma":"M"},"carlos-eduardo-alves-de-oliveira":{"mentorias":[{"date":"2026-03-20","id":"m0","note":""},{"date":"2026-04-17","id":"m1","note":""},{"date":"2026-06-22","id":"m2","note":""},{"date":"2026-07-13","id":"m3","note":""},{"date":"2026-08-28","id":"m4","note":""},{"date":"2026-10-20","id":"m5","note":""}],"name":"Carlos Eduardo Alves de Oliveira","obs":"","status":"ativo","turma":"M"},"caua-martins-moraes":{"mentorias":[{"date":"2026-03-31","id":"m0","note":""},{"date":"2026-04-23","id":"m1","note":""},{"date":"2026-05-25","id":"m2","note":""},{"date":"2026-06-19","id":"m3","note":""},{"date":"2026-08-14","id":"m4","note":""},{"date":"2026-08-28","id":"m5","note":""},{"date":"2026-09-25","id":"m6","note":""}],"name":"Cauã Martins Moraes","obs":"","status":"ativo","turma":"M"},"diego-gomes-de-souza":{"mentorias":[{"date":"2026-04-17","id":"m0","note":""},{"date":"2026-04-24","id":"m1","note":""},{"date":"2026-05-15","id":"m2","note":""},{"date":"2026-06-19","id":"m3","note":""},{"date":"2026-07-24","id":"m4","note":""},{"date":"2026-08-21","id":"m5","note":""},{"date":"2026-09-25","id":"m6","note":""}],"name":"Diego Gomes de Souza","obs":"","status":"ativo","turma":"M"},"filipe-santos-picinin":{"mentorias":[{"date":"2026-03-24","id":"m0","note":""},{"date":"2026-04-29","id":"m1","note":""},{"date":"2026-05-29","id":"m2","note":""},{"date":"2026-06-24","id":"m3","note":""},{"date":"2026-07-15","id":"m4","note":""},{"date":"2026-09-25","id":"m5","note":""}],"name":"Filipe Santos Picinin","obs":"","status":"ativo","turma":"M"},"gabriel-rodrigues-lima":{"mentorias":[{"date":"2026-03-27","id":"m0","note":""},{"date":"2026-04-24","id":"m1","note":""},{"date":"2026-05-29","id":"m2","note":""},{"date":"2026-07-31","id":"m3","note":""},{"date":"2026-08-20","id":"m4","note":""}],"name":"Gabriel Rodrigues Lima","obs":"Mentor saiu da Tokio Marine.","status":"ativo","turma":"M","problema":true},"gustavo-bolele-dos-santos":{"mentorias":[{"date":"2026-03-20","id":"m0","note":""},{"date":"2026-05-21","id":"m1","note":""},{"date":"2026-05-21","id":"m2","note":""}],"name":"Gustavo Bolele dos Santos","obs":"","status":"desistente","turma":"M"},"gustavo-da-silva-sousa":{"mentorias":[{"date":"2026-05-19","id":"m0","note":""},{"date":"2026-05-21","id":"m1","note":""},{"date":"2026-08-19","id":"m2","note":""}],"name":"Gustavo da Silva Sousa","obs":"Desistente a partir do 4º ciclo (Junho), após concluir as 3 primeiras mentorias.","status":"desistente","turma":"M"},"italo-da-silva-araujo":{"mentorias":[{"date":"2026-03-23","id":"m0","note":""},{"date":"2026-04-29","id":"m1","note":""},{"date":"2026-06-03","id":"m2","note":""},{"date":"2026-06-08","id":"m3","note":""},{"date":"2026-07-29","id":"m4","note":""},{"date":"2026-09-10","id":"m5","note":""},{"date":"2026-09-18","id":"m6","note":""}],"name":"Italo da Silva Araújo","obs":"","status":"ativo","turma":"M"},"joao-davi-gomes-bezerra":{"mentorias":[{"date":"2026-03-31","id":"m0","note":""},{"date":"2026-04-14","id":"m1","note":""},{"date":"2026-05-12","id":"m2","note":""},{"date":"2026-06-26","id":"m3","note":""},{"date":"2026-07-23","id":"m4","note":""},{"date":"2026-08-31","id":"m5","note":""}],"name":"João Davi Gomes Bezerra","obs":"","status":"ativo","turma":"M"},"joao-vitor-gomes-brito":{"mentorias":[{"date":"2026-03-27","id":"m0","note":""},{"date":"2026-04-29","id":"m1","note":""},{"date":"2026-06-12","id":"m2","note":""},{"date":"2026-06-26","id":"m3","note":""},{"date":"2026-07-31","id":"m4","note":""},{"date":"2026-09-04","id":"m5","note":""}],"name":"João Vitor Gomes Brito","obs":"","status":"ativo","turma":"M"},"john-kevin-pereira":{"mentorias":[{"date":"2026-05-18","id":"m0","note":""},{"date":"2026-06-11","id":"m1","note":""},{"date":"2026-07-14","id":"m2","note":""},{"date":"2026-08-28","id":"m3","note":""},{"date":"2026-09-21","id":"m4","note":""}],"name":"John Kevin Pereira","obs":"Desistente do curso, mas segue fazendo as mentorias.","status":"desistente","turma":"M"},"kaua-paulo-martins":{"mentorias":[],"name":"Kauã Paulo Martins","obs":"Desistente.","status":"desistente","turma":"M"},"leandro-morais-costa":{"mentorias":[{"date":"2026-03-17","id":"m0","note":""},{"date":"2026-04-13","id":"m1","note":""},{"date":"2026-06-16","id":"m2","note":""},{"date":"2026-06-21","id":"m3","note":""},{"date":"2026-07-16","id":"m4","note":""},{"date":"2026-09-18","id":"m5","note":""}],"name":"Leandro Morais Costa","obs":"Mentora entrou de ferias em Agosto e voltou em Setembro","status":"ativo","turma":"M"},"leonardo-lopes-da-silva-prates":{"mentorias":[{"date":"2026-04-30","id":"m0","note":""},{"date":"2026-05-21","id":"m1","note":""},{"date":"2026-06-12","id":"m2","note":""},{"date":"2026-06-16","id":"m3","note":""},{"date":"2026-07-31","id":"m4","note":""},{"date":"2026-08-28","id":"m5","note":""}],"name":"Leonardo Lopes da Silva Prates","obs":"","status":"ativo","turma":"M"},"lucas-lopes-da-silva-prates":{"mentorias":[{"date":"2026-04-07","id":"m0","note":""},{"date":"2026-04-29","id":"m1","note":""},{"date":"2026-05-27","id":"m2","note":""},{"date":"2026-06-10","id":"m3","note":""},{"date":"2026-07-22","id":"m4","note":""},{"date":"2026-08-27","id":"m5","note":""},{"date":"2026-10-13","id":"m6","note":""},{"date":"2026-10-28","id":"m7","note":""}],"name":"Lucas Lopes da Silva Prates","obs":"","status":"ativo","turma":"M"},"matheus-marques-miranda":{"mentorias":[{"date":"2026-03-23","id":"m0","note":""},{"date":"2026-05-05","id":"m1","note":""},{"date":"2026-05-25","id":"m2","note":""},{"date":"2026-06-24","id":"m3","note":""},{"date":"2026-07-29","id":"m4","note":""}],"name":"Matheus Marques Miranda","obs":"","status":"ativo","turma":"M"},"otavio-rodrigues-menezes":{"mentorias":[{"date":"2026-03-19","id":"m0","note":""}],"name":"Otavio Rodrigues Menezes","obs":"Desistente.","status":"desistente","turma":"M"},"pedro-henrique-cunha-de-abreu":{"mentorias":[{"date":"2026-03-23","id":"m0","note":""},{"date":"2026-04-23","id":"m1","note":""},{"date":"2026-05-28","id":"m2","note":""},{"date":"2026-07-03","id":"m3","note":""},{"date":"2026-08-21","id":"m4","note":""},{"date":"2026-08-21","id":"m5","note":""}],"name":"Pedro Henrique Cunha de Abreu","obs":"","status":"ativo","turma":"M"},"pedro-henrique-felismino-souza":{"mentorias":[{"date":"2026-03-26","id":"m0","note":""},{"date":"2026-04-29","id":"m1","note":""},{"date":"2026-05-29","id":"m2","note":""},{"date":"2026-07-02","id":"m3","note":""},{"date":"2026-08-14","id":"m4","note":""},{"date":"2026-08-20","id":"m5","note":""}],"name":"Pedro Henrique Felismino Souza","obs":"","status":"ativo","turma":"M"},"pedro-henrique-porfirio-de-santana":{"mentorias":[{"date":"2026-03-19","id":"m0","note":""},{"date":"2026-05-07","id":"m1","note":""},{"date":"2026-06-15","id":"m2","note":""}],"name":"Pedro Henrique Porfirio de Santana","obs":"Desistente do curso, mas segue fazendo as mentorias.","status":"desistente","turma":"M"},"pedro-henrique-silva-amorim":{"mentorias":[{"date":"2026-04-01","id":"m0","note":""},{"date":"2026-05-04","id":"m1","note":""},{"date":"2026-06-22","id":"m2","note":""},{"date":"2026-08-27","id":"m3","note":""},{"date":"2026-08-28","id":"m4","note":""},{"date":"2026-10-06","id":"m5","note":""}],"name":"Pedro Henrique Silva Amorim","obs":"","status":"ativo","turma":"M"},"pierry-gomes-de-oliveira":{"mentorias":[{"date":"2026-03-18","id":"m0","note":""},{"date":"2026-04-28","id":"m1","note":""},{"date":"2026-05-27","id":"m2","note":""},{"date":"2026-07-17","id":"m3","note":""}],"name":"Pierry Gomes de Oliveira","obs":"","status":"desistente","turma":"M"},"randy-jared-poca-mairana":{"mentorias":[{"date":"2026-04-27","id":"m0","note":""},{"date":"2026-05-22","id":"m1","note":""},{"date":"2026-06-12","id":"m2","note":""},{"date":"2026-08-19","id":"m3","note":""}],"name":"Randy Jared Poca Mairana","obs":"","status":"ativo","turma":"M","problema":true},"rian-santana-santos":{"mentorias":[{"date":"2026-03-27","id":"m0","note":""},{"date":"2026-04-24","id":"m1","note":""},{"date":"2026-06-05","id":"m2","note":""},{"date":"2026-07-31","id":"m3","note":""},{"date":"2026-08-21","id":"m4","note":""},{"date":"2026-09-07","id":"m5","note":""}],"name":"Rian Santana Santos","obs":"","status":"ativo","turma":"M"},"saymon-marques":{"mentorias":[{"date":"2026-03-27","id":"m0","note":""},{"date":"2026-04-24","id":"m1","note":""},{"date":"2026-05-25","id":"m2","note":""}],"name":"Saymon Marques","obs":"Desistente.","status":"desistente","turma":"M"},"thomas-franco-almeida":{"mentorias":[{"date":"2026-03-27","id":"m0","note":""}],"name":"Thomas Franco Almeida","obs":"Sem contato com a mentora desde março.","status":"ativo","turma":"M","problema":true},"vinicius-souza-monteiro":{"mentorias":[{"date":"2026-03-20","id":"m0","note":""},{"date":"2026-04-17","id":"m1","note":""},{"date":"2026-05-15","id":"m2","note":""},{"date":"2026-06-19","id":"m3","note":""},{"date":"2026-07-24","id":"m4","note":""},{"date":"2026-08-21","id":"m5","note":""},{"date":"2026-09-25","id":"m6","note":""}],"name":"Vinicius Souza Monteiro","obs":"","status":"ativo","turma":"M"}};
+const MES=['Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+const pad=n=>String(n).padStart(2,'0'),now=new Date();
+const today=`${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`;
+const curM=now.getFullYear()>2026?9:now.getFullYear()<2026?-1:Math.max(-1,Math.min(9,now.getMonth()-2));
+const exp=curM+1;
+const S={students:[],admin:false,me:null,tab:'geral',open:null,filter:'todos',q:'',edit:null,err:'',loaded:false,newOpen:false,modal:false};
+let db=null;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
+const fd=d=>d.slice(8)+'/'+d.slice(5,7)+'/'+d.slice(0,4);
+const slug=n=>norm(n).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+function st(s){
+  const ms=(s.mentorias||[]).slice().sort((a,b)=>a.date<b.date?-1:1);
+  const done=ms.filter(m=>m.date<today),next=ms.filter(m=>m.date>=today);
+  const by=Array(10).fill(0);
+  ms.forEach(m=>{if(m.date.startsWith('2026-')){const i=+m.date.slice(5,7)-3;if(i>=0&&i<10)by[i]++}});
+  const deficit=Math.max(0,exp-done.length);
+  const k=s.status==='desistente'?'des':deficit>0?'atr':'ok';
+  const slots=Array.from({length:10},(_,i)=>i<done.length?{c:'ok',d:done[i].date}:i<done.length+next.length?{c:'wa',d:next[i-done.length].date}:(i<=curM&&k!=='des')?{c:'er'}:{c:''});
+  return{ms,done,next,by,deficit,k,slots};
+}
+const pp=s=>s.problema?' <span class="pill er">⚠ Problema na mentoria</span>':'';
+const pill=(s,d)=>s==='des'?'<span class="pill gr">Desistente</span>':s==='atr'?`<span class="pill ${d>=3?'er':'wa'}">Atrasado · ${d}</span>`:'<span class="pill ok">Em dia</span>';
+function heat(x,big){
+  const O=['1ª','2ª','3ª','4ª','5ª','6ª','7ª','8ª','9ª','10ª'];
+  return `<div class="sc"><div class="hm${big?' big':''}">${x.slots.map((s,i)=>`<span class="${s.c}" title="${O[i]} mentoria (${MES[i]})${s.d?' · '+fd(s.d):''}">${s.d?(big?s.d.slice(8)+'/'+s.d.slice(5,7):(s.c==='ok'?'✓':'◷')):''}</span>`).join('')}</div>${big?`<div class="hm big hl" style="margin-top:3px;display:grid">${O.map((o,i)=>`<span style="background:none;height:auto">${o}<br>${MES[i]}</span>`).join('')}</div>`:''}</div>`;
+}
+const bar=(l,v,t,col)=>`<div class="br"><span>${l}</span><div class="bar"><i style="width:${t?v/t*100:0}%;${col?'background:'+col:''}"></i></div><span>${v}${t?'/'+t:''}</span></div>`;
+
+function overview(){
+  const all=S.students.map(s=>({s,x:st(s)})),act=all.filter(a=>a.x.k!=='des'),des=all.length-act.length;
+  const ok=act.filter(a=>a.x.k==='ok').length,late=act.length-ok;
+  const done=all.reduce((n,a)=>n+a.x.done.length,0),sch=all.reduce((n,a)=>n+a.x.next.length,0);
+  const O=['1ª','2ª','3ª','4ª','5ª','6ª','7ª','8ª','9ª','10ª'];
+  const monthBars=O.map((m,i)=>{if(i>curM)return bar(m,0,0);const v=act.filter(a=>a.x.done.length>i).length;return bar(m,v,act.length)}).join('');
+  const tot=MES.map((m,i)=>[m,all.reduce((n,a)=>n+a.x.by[i],0)]);const mx=Math.max(1,...tot.map(t=>t[1]));
+  const dist=[0,1,2,3].map(d=>[d===3?'3+':d,act.filter(a=>d===3?a.x.deficit>=3:a.x.deficit===d).length]);
+  const worst=act.filter(a=>a.x.deficit>0).sort((a,b)=>b.x.deficit-a.x.deficit).slice(0,8);
+  return `<div class="grid">
+  <div class="card kpi"><span class="mu">Alunos ativos</span><b>${act.length}</b><span class="mu">de ${all.length} · ${des} desistentes</span></div>
+  <div class="card kpi"><span class="mu">Em dia</span><b style="color:var(--ok)">${act.length?Math.round(ok/act.length*100):0}%</b><span class="mu">${ok} alunos</span></div>
+  <div class="card kpi"><span class="mu">Atrasados</span><b style="color:var(--er)">${late}</b><span class="mu">precisam recuperar</span></div>
+  <div class="card kpi"><span class="mu">Com problema</span><b style="color:var(--er)">${act.filter(a=>a.s.problema).length}</b><span class="mu">relatados pelos alunos</span></div>
+  <div class="card kpi"><span class="mu">Mentorias feitas</span><b>${done}</b><span class="mu">${sch} agendadas</span></div></div>
+  <div class="g2"><div class="card"><h2>Alunos que já concluíram a Nª mentoria</h2><p class="mu" style="margin-top:-8px">Conta por ordem de mentoria, não por mês</p>${monthBars}</div>
+  <div class="card"><h2>Volume de mentorias por mês (todos)</h2>${tot.map(([m,v])=>bar(m,v,mx,'var(--ac)').replace('/'+mx,'')).join('')}</div>
+  <div class="card"><h2>Quantas mentorias faltam recuperar</h2><p class="mu" style="margin-top:-8px">Esperado até ${curM>=0?MES[curM]:'—'}: ${exp} por aluno</p>${dist.map(([l,v])=>bar(l+' falta'+(l==1?'':'m'),v,act.length,l==0?'var(--ok)':l==1?'var(--wa)':'var(--er)')).join('')}</div>
+  <div class="card"><h2>⚠ Problemas relatados pelos alunos</h2>${all.filter(a=>a.s.problema||a.s.obsAluno).map(a=>`<div class="it" data-act="open" data-id="${a.s.id}" style="cursor:pointer;display:block"><b>${esc(a.s.name)}</b>${pp(a.s)}<div class="mu">${esc((a.s.obsAluno||'').slice(0,120))}</div></div>`).join('')||'<p class="mu">Nenhum relato até agora.</p>'}</div>
+  <div class="card"><h2>📝 Observações da coordenação</h2>${all.filter(a=>a.s.obs).map(a=>`<div class="it" data-act="open" data-id="${a.s.id}" style="cursor:pointer;display:block"><b>${esc(a.s.name)}</b><div class="mu">${esc(a.s.obs)}</div></div>`).join('')||'<p class="mu">Nenhuma observação.</p>'}</div>
+  <div class="card"><h2>Atenção prioritária</h2>${worst.length?worst.map(a=>`<div class="it" data-act="open" data-id="${a.s.id}" style="cursor:pointer"><span>${esc(a.s.name)}</span>${pill('atr',a.x.deficit)}</div>`).join(''):'<p class="mu">Ninguém atrasado 🎉</p>'}</div></div>`;
+}
+function list(){
+  let a=S.students.map(s=>({s,x:st(s)}));
+  const q=norm(S.q);if(q)a=a.filter(r=>norm(r.s.name).includes(q));
+  if(S.filter==='prob')a=a.filter(r=>r.s.problema);else if(S.filter!=='todos')a=a.filter(r=>r.x.k===S.filter);
+  a.sort((p,q)=>q.x.deficit-p.x.deficit||p.s.name.localeCompare(q.s.name));
+  const chips=[['todos','Todos'],['atr','Atrasados'],['ok','Em dia'],['des','Desistentes'],['prob','⚠ Com problema']].map(([k,l])=>`<button class="chip ${S.filter===k?'on':''}" data-act="filter" data-k="${k}">${l}</button>`).join('');
+  return `<div class="card"><div class="row" style="margin-bottom:12px"><input class="f" id="q" placeholder="Buscar aluno…" value="${esc(S.q)}">${chips}<button class="p" data-act="newtoggle">+ Aluno</button></div>
+  ${S.newOpen?`<div class="row" style="margin-bottom:12px"><input class="f" id="nn" placeholder="Nome completo do novo aluno"><button class="p" data-act="newsave">Adicionar</button></div>`:''}
+  <div class="sc"><table><tr><th>Aluno</th><th>Feitas</th><th>Situação</th><th>Observação</th><th style="min-width:230px">1ª → 10ª mentoria</th></tr>
+  ${a.map(r=>`<tr class="c" data-act="open" data-id="${r.s.id}"><td>${esc(r.s.name)}</td><td>${r.x.done.length}/${exp}</td><td>${pill(r.x.k,r.x.deficit)}${pp(r.s)}</td><td class="mu" style="max-width:220px">${esc(r.s.obs||'')}</td><td>${heat(r.x)}</td></tr>`).join('')||'<tr><td colspan="5" class="mu">Nenhum aluno encontrado.</td></tr>'}</table></div></div>`;
+}
+function detail(s){
+  const x=st(s),ro=S.edit;
+  const items=x.ms.slice().reverse().map(m=>{
+    if(ro===m.id)return `<div class="it"><div class="row"><input type="date" id="ed" value="${m.date}"><input class="f" id="en" value="${esc(m.note)}" placeholder="Observação (opcional)"></div><div class="row"><button class="p" data-act="esave" data-m="${m.id}">Salvar</button><button data-act="ecancel">Cancelar</button></div></div>`;
+    const fut=m.date>=today;
+    return `<div class="it"><div><b>${fd(m.date)}</b> ${fut?'<span class="pill wa">Agendada</span>':'<span class="pill ok">Realizada</span>'}${m.note?`<div class="mu">${esc(m.note)}</div>`:''}</div><div class="row"><button data-act="estart" data-m="${m.id}">Editar</button><button class="d" data-act="del" data-m="${m.id}">Remover</button></div></div>`;
+  }).join('')||'<p class="mu">Nenhuma mentoria registrada ainda.</p>';
+  const note=(s.problema||s.obsAluno)?`<div class="card" style="border-color:var(--er)"><h2>${S.admin?'Relato do aluno':'Sua observação'}${s.obsAt?` <span class="mu">· ${fd(s.obsAt)}</span>`:''}</h2>${s.problema?'<p style="margin:0 0 6px"><b>Marcado como: tem problemas na mentoria</b></p>':''}${s.obsAluno?`<p style="margin:0;white-space:pre-wrap">${esc(s.obsAluno)}</p>`:''}</div>`:'';
+  const late=x.k==='atr'?`<div class="card" style="background:var(--${x.deficit>=3?'erb':'wab'})">Faltam <b>${x.deficit}</b> mentoria(s) para ficar em dia (esperado até ${MES[curM]}: ${exp}). Agende para recuperar!</div>`:'';
+  return `<div class="top"><div><h1>${esc(s.name)}</h1><span class="mu">Turma ${esc(s.turma||'-')}</span> ${pill(x.k,x.deficit)}${pp(s)}</div>
+  <div class="row">${S.admin?`<button data-act="back">← Voltar</button><button class="${s.problema?'d':''}" data-act="ptoggle">${s.problema?'Remover sinalização de problema':'⚠ Sinalizar problema'}</button><button data-act="toggle">${s.status==='desistente'?'Reativar aluno':'Marcar desistente'}</button>`:`<button class="${s.problema?'d':''}" data-act="mopen">⚠ Relatar problema / observação</button><button data-act="logout">Sair</button>`}</div></div>
+  ${note}${S.admin?`<div class="card"><h2>📝 Observações da coordenação</h2><textarea id="ao" placeholder="Anotações internas sobre este aluno…">${esc(s.obs||'')}</textarea><div class="row" style="margin-top:8px"><button class="p" data-act="osave">Salvar observação</button><span class="mu">Visível só para o admin</span></div></div>`:''}${late}<div class="card"><h2>Mentorias por ordem (1ª a 10ª)</h2>${heat(x,true)}<p class="mu">Verde = realizada · Tracejado = agendada · Vermelho = mentoria que já deveria ter sido feita.</p></div>
+  <div class="card"><h2>Adicionar mentoria</h2><div class="row"><input type="date" id="nd" min="2026-03-01" max="2026-12-31" value="${today<'2026-03-01'||today>'2026-12-31'?'':today}"><input class="f" id="nn2" placeholder="Observação (opcional)"><button class="p" data-act="add">Adicionar</button></div>${S.err?`<div class="err">${esc(S.err)}</div>`:''}<p class="mu">Hoje e datas futuras ficam como “agendada”; a partir do dia seguinte viram “realizada”.</p></div>
+  ${S.modal&&!S.admin?`<div class="ov"><div class="card"><h2>Observação sobre suas mentorias</h2>
+  <label class="rd"><input type="radio" name="pb" value="1" ${s.problema?'checked':''}> <span><b>Tenho problemas na mentoria</b><br><span class="mu">Você será sinalizado(a) para a coordenação</span></span></label>
+  <label class="rd"><input type="radio" name="pb" value="0" ${s.problema?'':'checked'}> <span>Está tudo certo, só quero deixar uma observação</span></label>
+  <textarea id="po" placeholder="Ex.: meu mentor não responde, não consigo horário…">${esc(s.obsAluno||'')}</textarea>
+  <div class="row" style="margin-top:10px;justify-content:flex-end"><button data-act="mclose">Cancelar</button><button class="p" data-act="msave">Salvar</button></div></div></div>`:''}
+  <div class="card"><h2>Histórico (${x.done.length} realizadas${x.next.length?`, ${x.next.length} agendadas`:''})</h2>${items}</div>`;
+}
+function login(){
+  return `<div class="ov"><div class="card"><h1>👋 Bem-vindo(a)</h1><p class="mu">Mentorias PMT 26 · digite seu <b>nome completo</b> para acessar seu histórico.</p>
+  <div class="row"><input class="f" id="ln" placeholder="Nome completo" autocomplete="off"><button class="p" data-act="login">Entrar</button></div>${S.err?`<div class="err">${esc(S.err)}</div>`:''}</div></div>`;
+}
+function render(){
+  const a=document.getElementById('app');
+  if(!db){a.innerHTML='<div class="card">Entre na sua conta Claude para acessar o painel.</div>';return}
+  if(!S.loaded){a.innerHTML='<p class="mu">Carregando…</p>';return}
+  let h='';const cur=S.students.find(s=>s.id===(S.admin?S.open:S.me));
+  if(S.admin){
+    h=`<div class="top"><h1>Painel de Mentorias · PMT 26</h1><div class="row"><span class="mu">Admin · ${pad(now.getDate())}/${pad(now.getMonth()+1)}/${now.getFullYear()}</span><button data-act="logout">Sair</button></div></div>`;
+    if(cur)h+=detail(cur);
+    else{h+=`<div class="tabs"><button class="${S.tab==='geral'?'on':''}" data-act="tab" data-k="geral">Visão geral</button><button class="${S.tab==='alunos'?'on':''}" data-act="tab" data-k="alunos">Alunos</button></div>`;
+      h+=!S.students.length?`<div class="card"><p>Banco vazio. ${S.err?esc(S.err):''}</p><button class="p" onclick="importSeed()">Importar os 32 alunos iniciais</button></div>`:S.tab==='geral'?overview():list()}
+  }else h=cur?detail(cur):login();
+  a.innerHTML=h;const l=document.getElementById('ln');if(l)l.focus();
+}
+function user_save(s,ms){return db.doc('students/'+s.id).update({mentorias:ms}).catch(e=>{S.err='Erro ao salvar: '+(e.message||e);render()})}
+function curS(){return S.students.find(s=>s.id===(S.admin?S.open:S.me))}
+const uid=()=>'m'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act,s=curS(),g=id=>document.getElementById(id);
+  S.err='';
+  if(a==='tab'){S.tab=b.dataset.k;S.open=null}
+  else if(a==='filter')S.filter=b.dataset.k;
+  else if(a==='open'){S.open=b.dataset.id;S.edit=null}
+  else if(a==='osave'&&s)db.doc('students/'+s.id).update({obs:g('ao').value.trim()});
+  else if(a==='ptoggle'&&s)db.doc('students/'+s.id).update({problema:!s.problema});
+  else if(a==='mopen')S.modal=true;
+  else if(a==='mclose')S.modal=false;
+  else if(a==='msave'){const pr=(document.querySelector('input[name=pb]:checked')||{}).value==='1',o=g('po').value.trim();S.modal=false;db.doc('students/'+s.id).update({problema:pr,obsAluno:o,obsAt:today}).catch(e=>{S.err='Erro ao salvar: '+(e.message||e);render()})}
+  else if(a==='back'){S.open=null;S.edit=null}
+  else if(a==='newtoggle')S.newOpen=!S.newOpen;
+  else if(a==='newsave'){const n=g('nn').value.trim().replace(/\s+/g,' ');if(n.split(' ').length<2){S.err='Informe o nome completo.'}else{const id=slug(n);db.doc('students/'+id).set({name:n,turma:'M',status:'ativo',obs:'',mentorias:[]});S.newOpen=false}}
+  else if(a==='login'){const n=norm(g('ln').value),f=S.students.filter(x=>norm(x.name)===n);
+    if(g('ln').value.trim()==='Swgxin100708ab'){S.admin=true;S.open=null;S.tab='geral';try{localStorage.setItem('pmt_me','__adm__')}catch(_){}}else if(f.length===1){S.me=f[0].id;try{localStorage.setItem('pmt_me',S.me)}catch(_){}}else S.err='Nome não encontrado. Digite o nome completo, como na lista da turma.'}
+  else if(a==='logout'){S.me=null;S.modal=false;S.admin=false;S.open=null;S.edit=null;try{localStorage.removeItem('pmt_me')}catch(_){}}
+  else if(s){
+    const ms=(s.mentorias||[]).slice();
+    if(a==='add'){const d=g('nd').value;if(!d)S.err='Escolha uma data.';else if(d<'2026-03-01'||d>'2026-12-31')S.err='A data deve estar entre março e dezembro de 2026.';else{ms.push({id:uid(),date:d,note:g('nn2').value.trim()});user_save(s,ms)}}
+    else if(a==='estart')S.edit=b.dataset.m;
+    else if(a==='ecancel')S.edit=null;
+    else if(a==='esave'){const d=g('ed').value,m=ms.find(x=>x.id===b.dataset.m);if(!d||d<'2026-03-01'||d>'2026-12-31')S.err='Data inválida (março a dezembro de 2026).';else{m.date=d;m.note=g('en').value.trim();S.edit=null;user_save(s,ms)}}
+    else if(a==='del'){if(confirm('Remover esta mentoria?'))user_save(s,ms.filter(x=>x.id!==b.dataset.m))}
+    else if(a==='toggle')db.doc('students/'+s.id).update({status:s.status==='desistente'?'ativo':'desistente'});
+  }
+  render();
+});
+document.addEventListener('input',e=>{if(e.target.id==='q'){S.q=e.target.value;const p=e.target.selectionStart;render();const q=document.getElementById('q');q.focus();q.setSelectionRange(p,p)}});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='ln')document.querySelector('[data-act=login]').click()});
+db={doc:p=>{const[c,i]=p.split('/');const ref=doc(fdb,c,i);return{update:o=>updateDoc(ref,o),set:o=>setDoc(ref,o)}}};
+try{const m=localStorage.getItem('pmt_me');if(m==='__adm__')S.admin=true;else S.me=m}catch(_){}
+onSnapshot(collection(fdb,'students'),snap=>{
+  S.students=snap.docs.map(d=>({id:d.id,...d.data()}));S.loaded=true;
+  const ae=document.activeElement;if(ae&&(ae.tagName==='INPUT'||ae.tagName==='TEXTAREA')&&ae.id!=='q'&&!ae.id.startsWith('ln'))return;
+  render();
+},e=>{S.err='Erro ao conectar ao banco: '+e.message;S.loaded=true;render()});
+window.importSeed=async()=>{if(!confirm('Importar os 32 alunos iniciais?'))return;const b=writeBatch(fdb);Object.entries(SEED).forEach(([id,d])=>b.set(doc(fdb,'students',id),d));await b.commit()};
+render();
+</script></body></html>
